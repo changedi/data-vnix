@@ -3,12 +3,11 @@
  */
 package com.taobao.wdm.common.dataset;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author changedi
  *
- * 2013Äê11ÔÂ15ÈÕ
  * 
  */
 public class Instance {
