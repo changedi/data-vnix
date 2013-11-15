@@ -10,5 +10,4 @@ package com.taobao.wdm.common.io;
  */
 public interface Reader {
 
-	
 }
