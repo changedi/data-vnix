@@ -22,8 +22,23 @@ public class Instance implements Serializable{
 	private List<Attribute> attributes;
 	
 	public Instance(){
-		this.attributes = new ArrayList<Attribute>();
-		
+		this(new ArrayList<Attribute>());		
+	}
+	
+	public Instance(List<Attribute> attributes){
+		this.setAttributes(attributes);
+	}
+
+	public List<Attribute> getAttributes() {
+		return attributes;
+	}
+
+	public void setAttributes(List<Attribute> attributes) {
+		this.attributes = attributes;
+	}
+	
+	public boolean addAttribute(Attribute attr){
+		return this.attributes.add(attr);
 	}
 	
 	

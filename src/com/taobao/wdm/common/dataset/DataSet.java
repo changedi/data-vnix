@@ -30,4 +30,34 @@ public class DataSet {
 		this.instances = instances;
 	}	
 	
+	public boolean add(Instance inst){
+		return this.instances.add(inst);
+	}
+	
+	public void setClassIndex(int index){
+		this.classIndex = index;
+	}
+	
+	public int getClassIndex(){
+		return this.classIndex;
+	}
+
+	public List<String> getAttributeNames() {
+		return attributeNames;
+	}
+
+	public void setAttributeNames(List<String> attributeNames) {
+		this.attributeNames = attributeNames;
+	}
+
+	public List<Instance> getInstances() {
+		return instances;
+	}
+
+	public void setInstances(List<Instance> instances) {
+		this.instances = instances;
+	}
+	
+	
+	
 }
