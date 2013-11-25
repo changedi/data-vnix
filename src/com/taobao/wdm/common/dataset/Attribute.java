@@ -24,6 +24,9 @@ public class Attribute implements Serializable{
 		this.value = value;
 	}
 
+	public Attribute() {
+	}
+
 	public Object getValue() {
 		return value;
 	}
