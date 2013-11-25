@@ -13,9 +13,11 @@ import java.util.List;
  */
 public class DataSet {
 
-	private 	int 		classIndex = -1	;//-1 means no class
+	private 	int 		classIndex  = -1;//-1 means no class
 	private List<String> 	attributeNames	;
 	private List<Instance>	instances		;
+	private		int 		size	    = 0	;
+	private		int 		columnNum	= 0	;
 	
 	public DataSet() {
 		this(new ArrayList<String>(), new ArrayList<Instance>());
@@ -31,6 +33,7 @@ public class DataSet {
 	}	
 	
 	public boolean add(Instance inst){
+		size++;
 		return this.instances.add(inst);
 	}
 	
@@ -48,6 +51,7 @@ public class DataSet {
 
 	public void setAttributeNames(List<String> attributeNames) {
 		this.attributeNames = attributeNames;
+		this.columnNum = attributeNames.size();
 	}
 
 	public List<Instance> getInstances() {
@@ -56,8 +60,15 @@ public class DataSet {
 
 	public void setInstances(List<Instance> instances) {
 		this.instances = instances;
+		this.size = instances.size();
 	}
-	
-	
+
+	public int size() {
+		return size;
+	}
+
+	public int attributesNum() {
+		return columnNum;
+	}
 	
 }
