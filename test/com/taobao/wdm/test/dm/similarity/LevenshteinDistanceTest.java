@@ -18,4 +18,22 @@ public class LevenshteinDistanceTest  extends TestCase{
 		String tar = "turban";
 		assertEquals(2,LevenshteinDistance.distance(ori, tar));
 	}
+	
+	public void testDistanceNull(){
+		String ori = null;
+		String tar = "turban";
+		assertEquals(tar.length(),LevenshteinDistance.distance(ori, tar));
+	}
+	
+	public void testDistanceEmpty(){
+		String ori = "";
+		String tar = "turban";
+		assertEquals(tar.length(),LevenshteinDistance.distance(ori, tar));
+	}
+	
+	public void testDistanceEqual(){
+		String ori = "turban";
+		String tar = "turban";
+		assertEquals(0,LevenshteinDistance.distance(ori, tar));
+	}
 }
