@@ -31,8 +31,6 @@ public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 	private int maxClusterNum; // 聚类结束条件：聚类到maxClusterNum个结束
 	private double[][] r;
 
-	// private double ori[] = {1,2,5,7,9,10};
-
 	public HierachicalCluster(int num, double maxDis) {
 		ds = new DisjointSets(num);
 		n = num;
