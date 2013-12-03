@@ -44,6 +44,11 @@ public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 		this.points.add(point);
 	}
 
+	public void reset(){
+		this.points.clear();
+		this.clusterList.clear();
+		this.ds = new DisjointSets(n);
+	}
 	/**
 	 * this method provides a hierachical way for clustering data.
 	 * 
@@ -138,10 +143,6 @@ public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 			}
 			cc--;
 		}
-	}
-
-	public static void main(String args[]) {
-
 	}
 
 	@Override
