@@ -3,5 +3,5 @@ data-vnix
 
 data mining algorithms
 
-copyright 2013 @ changedi
+copyright &copy; 2013 changedi
 
