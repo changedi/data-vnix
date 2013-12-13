@@ -22,7 +22,6 @@ import com.taobao.wdm.common.collection.DisjointSets;
 
 public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 	private List<Cluster<T>> clusterList;
-	private List<T> points;
 	private DisjointSets ds;
 	private static final int MAX = Integer.MAX_VALUE;
 	private int n; // 原始样本点个数
@@ -32,11 +31,11 @@ public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 	private double[][] r;
 
 	public HierachicalCluster(int num, double maxDis) {
+		super();
 		ds = new DisjointSets(num);
 		n = num;
 		cc = n;
 		clusterList = new ArrayList<Cluster<T>>();
-		points = new ArrayList<T>();
 		this.maxDis = maxDis;
 	}
 
@@ -45,7 +44,7 @@ public class HierachicalCluster<T extends Clusterable<T>> extends Clusterer<T> {
 	}
 
 	public void reset(){
-		this.points.clear();
+		super.reset();
 		this.clusterList.clear();
 		this.ds = new DisjointSets(n);
 	}
