@@ -15,6 +15,9 @@
  */
 package com.taobao.wdm.dm.similarity;
 
+import com.taobao.wdm.dm.cluster.Cluster;
+import com.taobao.wdm.dm.cluster.Clusterable;
+
 /**
  * @author zunyuan.jy
  * 
@@ -126,4 +129,5 @@ public class DistanceUtils {
 		}
 		return max;
 	}
+	
 }
