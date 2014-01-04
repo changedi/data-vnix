@@ -18,8 +18,9 @@ package com.taobao.wdm.dm.cluster.point;
 import java.io.Serializable;
 import java.util.Collection;
 
+import org.apache.commons.math3.util.MathArrays;
+
 import com.taobao.wdm.dm.cluster.Clusterable;
-import com.taobao.wdm.dm.similarity.DistanceUtils;
 
 /**
  * A simple implementation of {@link Clusterable} for points with integer
@@ -61,7 +62,7 @@ public class EuclideanIntegerPoint implements
 	}
 
 	public double distanceFrom(final EuclideanIntegerPoint p) {
-		return DistanceUtils.distance(point, p.getPoint());
+		return MathArrays.distance(point, p.getPoint());
 	}
 
 	public EuclideanIntegerPoint centroidOf(
