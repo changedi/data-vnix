@@ -15,14 +15,29 @@
  */
 package com.taobao.wdm.dm.cluster;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author zunyuan.jy
- *
+ * 
  * @since 2013-11-30
  */
-public abstract class Clusterer<T extends Clusterable<T> > {
+public abstract class Clusterer<T extends Clusterable<T>> {
 
-	public abstract List<Cluster<T> > cluster();
+	protected List<T> points;
+
+	public Clusterer() {
+		points = new ArrayList<T>();
+	}
+
+	public void addPoint(T point) {
+		this.points.add(point);
+	}
+
+	public void reset() {
+		this.points.clear();
+	}
+
+	public abstract List<Cluster<T>> cluster();
 }
